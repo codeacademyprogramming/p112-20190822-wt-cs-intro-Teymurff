@@ -10,7 +10,9 @@ namespace Account_Balance
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int IDNumber { get; set; }
+        public string IDNumber { get; set; }
         public double Balance { get; set; }
+        public double BalanceIncrement { get; set; }
+        public double BalanceDecrement { get; set; }
     }
 }
