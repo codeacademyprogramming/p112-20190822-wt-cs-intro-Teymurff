@@ -21,11 +21,11 @@ namespace Account_Balance
             string newSurname = ac.Surname;
             string newId = ac.IDNumber;
             Console.WriteLine("***HESABIN YARADILMASI***");
-            Console.WriteLine("Adinizi daxil edin");
+            Console.WriteLine("Adinizi daxil edin:");
             name = Console.ReadLine();
-            Console.WriteLine("Soyadinizi daxil edin");
+            Console.WriteLine("Soyadinizi daxil edin:");
             surname = Console.ReadLine();
-            Console.WriteLine("Shexsiyyet vesiqesinin nomresini daxil edin");
+            Console.WriteLine("Shexsiyyet vesiqesinin nomresini daxil edin:");
             id = Console.ReadLine();
 
 
@@ -69,38 +69,29 @@ namespace Account_Balance
                         }
                         break;
                     case 4:
-                        Console.WriteLine("Adinizi daxil edin");
+                        Console.WriteLine("Adinizi daxil edin:");
                         newName = Console.ReadLine();
-                        if (string.IsNullOrEmpty(newName))
+                        while (string.IsNullOrEmpty(newName))
                         {
-                            Console.WriteLine(name);
+                            Console.WriteLine("Ad bosh ola bilmez, adinizi bir daha daxil edin:");
+                            newName = Console.ReadLine();
                         }
-                        else {
-                            Console.WriteLine(newName);
-                        }
-                        Console.WriteLine("Soyadinizi daxil edin");
-                        newSurname= Console.ReadLine();
-                        if (string.IsNullOrEmpty(newSurname))
+                        Console.WriteLine("Soyadinizi daxil edin:");
+                        newSurname = Console.ReadLine();
+                        while (string.IsNullOrEmpty(newSurname))
                         {
-                            Console.WriteLine(surname);
+                            Console.WriteLine("Soyad bosh ola bilmez, soyadinizi bir daha daxil edin:");
+                            newSurname = Console.ReadLine();
                         }
-                        else
-                        {
-                            Console.WriteLine(newSurname);
-                        }
-                        Console.WriteLine("Shexsiyyet vesiqesinin nomresini daxil edin");
+                        Console.WriteLine("Shexsiyyet vesiqesinin nomresini daxil edin:");
                         newId = Console.ReadLine();
-                        if (string.IsNullOrEmpty(newId))
+                        while (string.IsNullOrEmpty(newId))
                         {
-                            Console.WriteLine(id);
-                        }
-                        else
-                        {
-                            Console.WriteLine(newId);
-
+                            Console.WriteLine("SV nomresi bosh ola bilmez, SV nomresini bir daha daxil edin:");
+                            newId = Console.ReadLine();
                         }
                         break;
-    
+
                     case 0:
                         Environment.Exit(0);
                         break;
